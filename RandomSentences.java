@@ -12,13 +12,18 @@ public class RandomSentences {
         String[] adverbs = {"slowly", "diligently", "warmly", "sadly", "rapidly"};
         String[] details = {"near the river", "at home", "in the park", "sadly", "rapidly"};
 
+        System.out.println("Hello, this is yout first random-generated sentence: ");
+
         while (true) {
             String randomName = getRandomWords(names);
-            String randomPlace = getRandomWords(names);
-            String randomVerb = getRandomWords(names);
-            String randomNoun = getRandomWords(names);
-            String randomAdverb = getRandomWords(names);
-            String randomDetail = getRandomWords(names);
+            String randomPlace = getRandomWords(places);
+            String randomVerb = getRandomWords(verbs);
+            String randomNoun = getRandomWords(nouns);
+            String randomAdverb = getRandomWords(adverbs);
+            String randomDetail = getRandomWords(details);
+
+            System.out.printf("%s from %s %s %s %s%n", randomName, randomPlace, randomAdverb, randomVerb, randomNoun, randomDetail);
+            System.out.println("Click [Enter] to generate a new one.");
         }
 
     }
